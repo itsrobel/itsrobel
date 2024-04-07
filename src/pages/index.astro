@@ -4,6 +4,7 @@ export const prerender = false;
 import BaseLayout from '../layouts/Base.astro';
 import PostPreview from "@/components/blog/PostPreviewB";
 import SocialMediaLinks from "@/components/SocialMediaLinks";
+import SaveContact from 'src/components/svelte/SaveContact.svelte';
 
 
 import { getAllPosts, sortMDByDate, sortMDByPinned } from "@/utils";
@@ -45,8 +46,8 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 		href: "https://github.com/natemoo-re/astro-icon#readme",
 	},
 ];
----
 
+---
 <BaseLayout title="Home">
 	<section>
 		<h1 class="title">Hello World</h1>
@@ -58,6 +59,7 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 		<div>
 			<span>You can find me on: </span>
 			<SocialMediaLinks/>
+      <a class="cody-link"id="save-contact">Save Contact</a>
 		</div>
 	</section>
 
@@ -68,24 +70,45 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 		</ul>
 	</section>
 
-	<section class="mt-16">
-			<h2 class="title">Technologies</h2>
-			<ul class="space-y-4 sm:space-y-2">
-				{
-					tech.map(({ href, title, desc }) => (
-						<li>
-							<a
-								href={href}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="cody-link inline-block"
-							>
-								{title}
-							</a>: 
-							<p class="inline-block sm:mt-2">{desc}</p>
-						</li>
-					))
-				}
-			</ul>
-		</section>
+	<!-- <section class="mt-16"> -->
+	<!-- 		<h2 class="title">Technologies</h2> -->
+	<!-- 		<ul class="space-y-4 sm:space-y-2"> -->
+	<!-- 			{ -->
+	<!-- 				tech.map(({ href, title, desc }) => ( -->
+	<!-- 					<li> -->
+	<!-- 						<a -->
+	<!-- 							href={href} -->
+	<!-- 							target="_blank" -->
+	<!-- 							rel="noopener noreferrer" -->
+	<!-- 							class="cody-link inline-block" -->
+	<!-- 						> -->
+	<!-- 							{title} -->
+	<!-- 						</a>:  -->
+	<!-- 						<p class="inline-block sm:mt-2">{desc}</p> -->
+	<!-- 					</li> -->
+	<!-- 				)) -->
+	<!-- 			} -->
+	<!-- 		</ul> -->
+	<!-- 	</section> -->
 </BaseLayout>
+<script>
+function handleSaveContact() {
+  let contact = {
+  name: "Robel Schwarz",
+  phone: "606-620-8002",
+  email:"itsrobel.schwarz@gmail.com"
+  }
+
+  let vcard = `BEGIN:VCARD\nVERSION:4.0\nFN:${contact.name}\nTEL:${contact.phone}\nEMAIL:${contact.email}\nEND:VCARD`;
+  let blob = new Blob([vcard], {type: 'text/vcard'});
+  let url = window.URL.createObjectURL(blob);
+  let a = document.createElement('a');
+  a.href = url;
+  a.download = contact.name + '.vcf';
+  a.textContent = contact.name;
+  a.href = url;
+  a.click();
+}
+let button = document.getElementById('save-contact');
+button.addEventListener('click', handleSaveContact);
+</script>

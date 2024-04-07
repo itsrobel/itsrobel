@@ -62,7 +62,7 @@ export const NAV_LINKS: Array<{ title: string; path: string }> = [
   },
   {
     title: "About",
-    path: "/about",
+    path: "/blog/void",
   },
   {
     title: "Blog",

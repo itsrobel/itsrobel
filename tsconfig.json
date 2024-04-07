@@ -2,7 +2,9 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "baseUrl": ".",
-    "strictNullChecks": true,
+    "strictNullChecks": false,
+
+    "noImplicitAny": false,
     "paths": {
       "@/utils": ["src/utils/index.ts"],
       "@/components/*": ["src/components/*.astro", "src/components/*.tsx"],

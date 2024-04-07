@@ -5,22 +5,8 @@
   async function submit(e: SubmitEvent) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget as HTMLFormElement);
-    // console.log(formData)
-
-
-    // let body = {}
-    // for (let field of formData) {
-    //   const [key,value] = field
-    //   body[key] = value
-    // }
-    // console.log(body)
-
     const response = await fetch("/endpoints/feedback", {
       method: "POST",
-    //   headers: {
-    //   'Content-Type': 'application/json'
-    // // like application/json or text/xml
-    //   },
       body: formData,
     });
     const data = await response.json();
