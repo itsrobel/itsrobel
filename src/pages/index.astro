@@ -4,7 +4,6 @@ export const prerender = false;
 import BaseLayout from '../layouts/Base.astro';
 import PostPreview from "@/components/blog/PostPreviewB";
 import SocialMediaLinks from "@/components/SocialMediaLinks";
-import SaveContact from 'src/components/svelte/SaveContact.svelte';
 
 
 import { getAllPosts, sortMDByDate, sortMDByPinned } from "@/utils";
@@ -14,38 +13,38 @@ const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 const allPostsByPinned = sortMDByPinned(allPostsByDate);
 
-const tech: Array<{ title: string; desc: string; href: string }> = [
-	{
-		title: "Astro",
-		desc: "Build fast websites, faster.",
-		href: "https://astro.build",
-	},
-	{
-		title: "Astro Assets",
-		desc: "Built-in optimized asset support.",
-		href: "https://docs.astro.build/en/guides/assets/",
-	},
-	{
-		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-	},
-	{
-		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-	},
-	{
-		title: "MDX",
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-	},
-	{
-		title: "Astro Icon",
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
-	},
-];
+// const tech: Array<{ title: string; desc: string; href: string }> = [
+// 	{
+// 		title: "Astro",
+// 		desc: "Build fast websites, faster.",
+// 		href: "https://astro.build",
+// 	},
+// 	{
+// 		title: "Astro Assets",
+// 		desc: "Built-in optimized asset support.",
+// 		href: "https://docs.astro.build/en/guides/assets/",
+// 	},
+// 	{
+// 		title: "Tailwind CSS",
+// 		desc: "Rapidly build modern websites without ever leaving your HTML.",
+// 		href: "https://tailwindcss.com",
+// 	},
+// 	{
+// 		title: "Markdown",
+// 		desc: "Simple and easy-to-use markup language.",
+// 		href: "https://www.markdownguide.org/",
+// 	},
+// 	{
+// 		title: "MDX",
+// 		desc: "Markdown for the component era.",
+// 		href: "https://mdxjs.com/",
+// 	},
+// 	{
+// 		title: "Astro Icon",
+// 		desc: "An easy to use Icon component for Astro.",
+// 		href: "https://github.com/natemoo-re/astro-icon#readme",
+// 	},
+// ];
 
 ---
 <BaseLayout title="Home">
