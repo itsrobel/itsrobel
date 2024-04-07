@@ -1,12 +1,13 @@
 ---
-title: 'Project 2'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
-pubDate: 'Aug 13 2022'
+title: "Project 2"
+description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci"
+pubDate: "Aug 13 2022"
 heroImage:
-    url: '/blog-placeholder-about.jpg'
-    alt: 'GitHub wallpaper'
+  url: "/cardb.png"
+  alt: "GitHub wallpaper"
 platform: Web
-stack: ['Astro', 'JS', 'tailwind'] website: https://github.com/kirontoo/astro-theme-cody
+stack: ["Astro", "JS", "tailwind"]
+website: https://github.com/kirontoo/astro-theme-cody
 github: https://github.com/kirontoo/astro-theme-cody
 order: 2
 ---
