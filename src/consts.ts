@@ -67,10 +67,10 @@ export const socialLinks: Array<SocialLink> = [
 ];
 
 export const NAV_LINKS: Array<{ title: string; path: string }> = [
-  {
-    title: "Home",
-    path: "/",
-  },
+  // {
+  //   title: "Home",
+  //   path: "/",
+  // },
   {
     title: "About",
     path: "/blog/void",
