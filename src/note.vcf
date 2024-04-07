@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//dot.cards//-
+N:Schwarz;Robel;;;
+FN: Robel Schwarz
+CATEGORIES:Blogging,Writer,Athlete,computer scientist,data scientist,web developer
+item1.TEL;type=CELL;type=msg;type=pref:6066208002
+item1.X-ABLabel:Phone
+item2.URL;CHARSET=utf-8;type=pref:https://www.linkedin.com/in/robel-schwarz-015010275
+item2.X-ABLabel:LinkedIn
+item3.EMAIL;type=INTERNET;TYPE=pref:robel.schwarz@louisville.edu
+item3.X-ABLabel:University Email
+item4.URL;CHARSET=utf-8;type=pref:https://instagram.com/the_robellion?igshid=ZDc4ODBmNjlmNQ==
+item4.X-ABLabel:Personal
+item5.EMAIL;type=INTERNET;TYPE=pref:itsrobel.schwarz@gmail.com
+item5.X-ABLabel:Email
+item6.X-ABDATE;type=pref:20240407
+item6.X-ABLabel:Date Connected ~ via dot.
+item7.URL;CHARSET=utf-8;type=pref:https://dot.cards/robelschwarz
+item7.X-ABLabel:Robel Schwarz's dot. Profile
+END:VCARD

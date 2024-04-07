@@ -94,18 +94,20 @@ const tech: Array<{ title: string; desc: string; href: string }> = [
 <script>
 function handleSaveContact() {
   let contact = {
-  name: "Robel Schwarz",
-  phone: "606-620-8002",
+
+  fname: "Robel",
+  lname: "Schwarz",
+  phone: "6066208002",
   email:"itsrobel.schwarz@gmail.com"
   }
 
-  let vcard = `BEGIN:VCARD\nVERSION:4.0\nFN:${contact.name}\nTEL:${contact.phone}\nEMAIL:${contact.email}\nEND:VCARD`;
+  let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:${contact.lname};${contact.fname};;;\nFN:${contact.fname} ${contact.lname}\nTEL:${contact.phone}\nEMAIL:${contact.email}\nEND:VCARD`;
   let blob = new Blob([vcard], {type: 'text/vcard'});
   let url = window.URL.createObjectURL(blob);
   let a = document.createElement('a');
   a.href = url;
-  a.download = contact.name + '.vcf';
-  a.textContent = contact.name;
+  a.download = contact.fname + '.vcf';
+  a.textContent = contact.fname;
   a.href = url;
   a.click();
 }
