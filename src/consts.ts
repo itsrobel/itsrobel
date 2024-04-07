@@ -13,9 +13,9 @@ type Config = {
 
 type SocialLink = {
   icon: string;
+  handle: string; // for accessibility
   friendlyName: string; // for accessibility
   link: string;
-  handle: string; // for accessibility
 };
 
 export const siteConfig: Config = {
