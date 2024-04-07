@@ -4,19 +4,23 @@ import { socialLinks } from "../consts.ts";
 
 ---
 
-<div class="flex flex-wrap items-end gap-x-4">
-	<ul class="flex flex-wrap flex-1 items-center gap-x-2 sm:flex-initial">
+<div class="flex flex-wrap items-end gap-x-4  justify-items-end">
+	<ul class="flex-col flex flex-wrap flex-1 gap-x-2 ">
 		{
-			socialLinks.map(({ link, icon, friendlyName}) => (
-				<li class="flex">
+			socialLinks.map(({ link, icon, friendlyName, handle}) => (
+				<li>
 					<a
-						class="inline-block p-1 sm:hover:text-accent"
+						class=" inline-block p-1 sm:hover:text-accent "
 						href={link}
 						target="_blank"
 						rel={`noopener noreferrer`}
 						title={friendlyName}
 					>
-						<Icon class="h-5 w-5" name={icon} aria-hidden="true" focusable="false" />
+          <span class="flex flex-row flex-wrap">
+              <Icon class="h-5 w-5" name={icon} aria-hidden="true" focusable="false" />
+              <span> {handle} </span> 
+            </span>
+
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>

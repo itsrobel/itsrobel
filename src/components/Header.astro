@@ -16,7 +16,7 @@ const url = new URL(Astro.request.url);
 	</div>
 
 	<nav 
-		class="mt-4 bg-surface/95 sm:bg-bgColor absolute hidden top-8 w-full sm:block sm:static sm:mt-0 group-[.menu-open]:z-50 group-[.menu-open]:flex" 
+		class="mt-8 bg-surface/95 sm:bg-bgColorSoild absolute hidden top-8 w-full sm:h-10 sm:block sm:static sm:mt-0 group-[.menu-open]:z-50 group-[.menu-open]:flex" 
 		id="navigation-menu" 
 		aria-label="main menu"
 		>
@@ -30,13 +30,13 @@ const url = new URL(Astro.request.url);
 					data-astro-prefetch
 				>{nav.title}</HeaderLink>
 			))}
-				<HeaderLink 
-					class="sm:hidden block py-2 sm:py-0" 
-					href="/tags"
-					title="tags"
-					aria-current={url.pathname === "tags" ? "page" : false}
-					data-astro-prefetch
-				>Tags</HeaderLink>
+				<!-- <HeaderLink  -->
+				<!-- 	class="sm:hidden block py-2 sm:py-0"  -->
+				<!-- 	href="/tags" -->
+				<!-- 	title="tags" -->
+				<!-- 	aria-current={url.pathname === "tags" ? "page" : false} -->
+				<!-- 	data-astro-prefetch -->
+				<!-- >Tags</HeaderLink> -->
 		</div>
 	</nav>
 

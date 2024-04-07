@@ -15,6 +15,7 @@ type SocialLink = {
   icon: string;
   friendlyName: string; // for accessibility
   link: string;
+  handle: string; // for accessibility
 };
 
 export const siteConfig: Config = {
@@ -37,17 +38,27 @@ export const socialLinks: Array<SocialLink> = [
     icon: "mdi:github",
     friendlyName: "Github",
     link: "https://github.com/itsrobel",
+    handle: "itsrobel",
+  },
+  {
+    icon: "mdi:instagram",
+    friendlyName: "Instagram",
+    link: "https://www.instagram.com/the_robellion/",
+    handle: "the_robellion",
   },
   {
     icon: "mdi:linkedin",
     friendlyName: "LinkedIn",
     link: "https://www.linkedin.com/in/robel-schwarz/",
+    handle: "robel-schwarz",
   },
   {
     icon: "mdi:email",
     friendlyName: "email",
     link: "mailto:itsrobel.schwarz@gmail.com",
+    handle: "itsrobel.schwarz",
   },
+
   // {
   //   icon: "mdi:rss",
   //   friendlyName: "rss",
