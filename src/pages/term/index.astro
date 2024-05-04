@@ -1,59 +1,65 @@
 ---
-import BaseLayout from '../../layouts/Base.astro';
 
+export const prerender = false;
+import BaseLayout from '../../layouts/Base.astro';
+// import {CharacterName} from 'src/components/solid/CharacterName.jsx';
+import {Counter} from '../../components/solid/Counter.jsx';
 ---
 <BaseLayout title="Project Terminal">
+  <!-- <CharacterName  /> -->
+  <Counter client:only="solid-js"/>
+  
 <!-- header? -->
   <!-- <h1 class="flex font-bold text-xl items-center mb-4">  -->
   <!--    Terminal -->
   <!-- </h1> -->
   <!-- log -->
-  <div id="console" class="flex flex-col">
-  </div>
+  <!-- <div id="console" class="flex flex-col"> -->
+  <!-- </div> -->
 
   <!-- input -->
-  <div class="flex row">
-    <span id="prompt" class="flex row">[robellion]
-      <span id="dir">[~]</span>
-    </span>
-    <input type="text" class="block w-full p-2 border border-gray-300 rounded-lg" />
-  </div>
+  <!-- <div class="flex row"> -->
+  <!--   <span id="prompt" class="flex row">[robellion] -->
+  <!--     <span id="dir">[~]</span> -->
+  <!--   </span> -->
+  <!--   <input type="text" class="block w-full p-2 border border-gray-300 rounded-lg" /> -->
+  <!-- </div> -->
 </BaseLayout>
 <script>
-let commands = {"ls":"printed list of projects"};
-let currentDirectory = "~";
+// let commands = {"ls":"printed list of projects"};
+// let currentDirectory = "~";
+//
+//
+//
+// let terminal = document.querySelector('input');
 
 
 
-let terminal = document.querySelector('input');
-
-
-
-terminal.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    let prompt = document.getElementById("prompt").cloneNode(true);
-    prompt.setAttribute("id", "");
-    // promptDir = prompt.childNodes[1].innerHTML = "[not home]";
-    prompt.childNodes[1].innerHTML = currentDirectory;
-
-    // prompt.getElementById("dir").innerHTML = "[not home]";
-    // console.log();
-    let command = terminal.value;
-
-    prompt.innerHTML = prompt.innerHTML + command;
-
-
-
-    terminal.value = '';
-
-
-
-
-    // let log = document.createElement("span")
-    document.getElementById("console").appendChild(prompt);
-    // console.log(command);
-}
-});
-
+// terminal.addEventListener('keydown', function(e) {
+//   if (e.key === 'Enter') {
+//     let prompt = document.getElementById("prompt").cloneNode(true);
+//     prompt.setAttribute("id", "");
+//     // promptDir = prompt.childNodes[1].innerHTML = "[not home]";
+//     prompt.childNodes[1].innerHTML = currentDirectory;
+//
+//     // prompt.getElementById("dir").innerHTML = "[not home]";
+//     // console.log();
+//     let command = terminal.value;
+//
+//     prompt.innerHTML = prompt.innerHTML + command;
+//
+//
+//
+//     terminal.value = '';
+//
+//
+//
+//
+//     // let log = document.createElement("span")
+//     document.getElementById("console").appendChild(prompt);
+//     // console.log(command);
+// }
+// });
+//
 
 </script>
