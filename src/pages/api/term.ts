@@ -55,18 +55,18 @@ export const GET: APIRoute = ({ params, request }) => {
 //   return new Response(null, { status: 400 });
 // };
 
-export const DELETE: APIRoute = ({ request }) => {
-  return new Response(
-    JSON.stringify({
-      message: "This was a DELETE!",
-    }),
-  );
-};
-
-export const ALL: APIRoute = ({ request }) => {
-  return new Response(
-    JSON.stringify({
-      message: `This was a ${request.method}!`,
-    }),
-  );
-};
+// export const DELETE: APIRoute = ({ request }) => {
+//   return new Response(
+//     JSON.stringify({
+//       message: "This was a DELETE!",
+//     }),
+//   );
+// };
+//
+// export const ALL: APIRoute = ({ request }) => {
+//   return new Response(
+//     JSON.stringify({
+//       message: `This was a ${request.method}!`,
+//     }),
+//   );
+// };
