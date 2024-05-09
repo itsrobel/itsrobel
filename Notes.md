@@ -19,3 +19,5 @@ The projects end point should have terminal like Functionality for desktop
       or [another editor](https://github.com/umaranis/svelte-lexical)
       - refer to [video](https://www.youtube.com/watch?v=dwdd2a_L7xY&t=2s) for custom If I feel like it
     -
+
+# Content management system
