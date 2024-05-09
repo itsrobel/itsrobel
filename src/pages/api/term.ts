@@ -28,7 +28,7 @@ projects.push(linux);
 projects.push(keychain);
 projects.push(itsrobel);
 
-export const GET: APIRoute = ({ params, request }) => {
+export const GET: APIRoute = () => {
   console.log(projects);
   return new Response(
     JSON.stringify({
