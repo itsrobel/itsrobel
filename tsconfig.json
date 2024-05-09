@@ -1,26 +1,21 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "/home/stef/cody",
+    "baseUrl": "/home/stef/itsrobel",
     "strictNullChecks": false,
     "noImplicitAny": false,
     "paths": {
-      "@/utils": [
-        "src/utils/index.ts"
-      ],
+      "@/utils": ["src/utils/index.ts"],
       "@/components/*": [
         "src/components/*.astro",
-        "src/components/*.tsx"
+        "src/components/*.tsx",
+        "src/components/*.ts"
       ],
-      "@/layouts/*": [
-        "src/layouts/*.astro"
-      ]
+      "@/layouts/*": ["src/layouts/*.astro"]
     },
     "jsx": "preserve",
     "jsxImportSource": "solid-js"
   },
-  "include": [
-    "src",
-    "*.ts"
-  ]
+  "include": ["src", "*.ts", "*.tsx"]
 }
+

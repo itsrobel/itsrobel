@@ -1,0 +1,1 @@
+import"./hoisted.-a8rPBSx.js";const c=document.getElementById("toc");c&&c?.addEventListener("click",t=>{const n=window.location.hash.slice(1),e=document.getElementById(`toc-${n}`);e instanceof HTMLElement&&e?.classList.remove("active-toc"),t.target instanceof HTMLElement&&t.target.classList.add("active-toc")});
