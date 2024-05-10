@@ -4,14 +4,12 @@ import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/remark-reading-time.ts";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
-import solidJs from "@astrojs/solid-js";
-
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-theme-cody.netlify.app",
-  integrations: [mdx(), sitemap(), tailwind(), solidJs(), svelte()],
+  integrations: [mdx(), sitemap(), tailwind(), svelte()],
   // markdown: {
   //   remarkPlugins: [remarkReadingTime],
   //   syntaxHighlight: "shiki",
@@ -29,5 +27,6 @@ export default defineConfig({
   // },
   // },
   output: "hybrid",
-  adapter: vercel()
+  adapter: vercel(),
 });
+

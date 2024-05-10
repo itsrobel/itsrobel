@@ -29,7 +29,6 @@ projects.push(keychain);
 projects.push(itsrobel);
 
 export const GET: APIRoute = () => {
-  console.log(projects);
   return new Response(
     JSON.stringify({
       // message: "This was a GET!",

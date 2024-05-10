@@ -1,9 +1,10 @@
 ---
 import BaseLayout from 'src/layouts/Base.astro';
+import Terminal  from 'src/components/svelte/Terminal.svelte';
 // import { Terminal } from 'src/components/solid/Terminal.tsx';
+
 
 ---
 <BaseLayout title="Project Terminal">
-  <!-- <Terminal client:only="solid-js"/> -->
-
+  <Terminal client:only="svelte"/>
 </BaseLayout>
